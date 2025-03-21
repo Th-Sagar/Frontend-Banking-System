@@ -1,5 +1,5 @@
 export class Account {
-  id: number = 0;
+  id?: string;
   accountHolderName: string = '';
   balance: number = 0;
 }
