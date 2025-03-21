@@ -18,7 +18,18 @@ export class AccountService {
   createAccount(account: Account): Observable<Account> {
     return this.httpClient.post<Account>(`${this.baseUrl}`, account);
   }
-  // depositeById(id:string){
-  //   this.httpClient.
-  // }
+
+  getAccountById(id: String): Observable<Account> {
+    return this.httpClient.get<Account>(`${this.baseUrl}/${id}`);
+  }
+
+  deposite(id: string, amount: number): Observable<Account> {
+    const request = {
+      amount,
+    };
+    return this.httpClient.put<Account>(
+      `${this.baseUrl}/${id}/deposit`,
+      request
+    );
+  }
 }
