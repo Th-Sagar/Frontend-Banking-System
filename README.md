@@ -55,7 +55,7 @@ To clone the repository to your local machine:
 2. Open a terminal and run the following command:
 
 ```bash
-git clone https://github.com/<your-username>/banking-system-frontend.git
+git clone https://github.com/<your-username>/Frontend-Banking-System.git
 ```
 
 3. Navigate into the project directory:
