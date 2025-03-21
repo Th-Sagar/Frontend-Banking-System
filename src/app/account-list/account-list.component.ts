@@ -31,4 +31,8 @@ export class AccountListComponent {
     }
     this.router.navigate(['/deposit', id]);
   }
+
+  withdraw(id: string) {
+    this.router.navigate(['/withdraw', id]);
+  }
 }

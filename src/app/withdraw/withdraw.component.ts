@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Account } from '../account';
 import { AccountService } from '../account.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-deposit',
+  selector: 'app-withdraw',
   standalone: false,
-  templateUrl: './deposit.component.html',
-  styleUrl: './deposit.component.css',
+  templateUrl: './withdraw.component.html',
+  styleUrl: './withdraw.component.css',
 })
-export class DepositComponent {
+export class WithdrawComponent {
   id: string = '';
   successMessage: string = '';
   errorMessage: string = '';
@@ -45,7 +45,7 @@ export class DepositComponent {
         .deposite(this.id, this.account.balance)
         .subscribe((data) => {
           this.account = data;
-          this.successMessage = 'Deposit Successfully...';
+          this.successMessage = 'Withdraw Successfully...';
           setTimeout(() => {
             this.router.navigate(['/accounts']);
           }, 2000);

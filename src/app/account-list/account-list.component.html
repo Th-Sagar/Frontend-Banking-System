@@ -29,6 +29,14 @@
       >
         Deposit
       </td>
+
+      <td
+        (click)="withdraw(account.id ?? '')"
+        style="margin: 10px"
+        class="btn btn-danger"
+      >
+        Withdraw
+      </td>
     </tr>
   </tbody>
 </table>
