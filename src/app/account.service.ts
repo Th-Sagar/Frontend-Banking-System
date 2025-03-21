@@ -32,4 +32,12 @@ export class AccountService {
       request
     );
   }
+
+  withdraw(id: string, amount: number): Observable<Account> {
+    const request = { amount };
+    return this.httpClient.put<Account>(
+      `${this.baseUrl}/${id}/withdraw`,
+      request
+    );
+  }
 }

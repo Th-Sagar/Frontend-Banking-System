@@ -22,27 +22,15 @@ export class WithdrawComponent {
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-    console.log('first', this.id);
-
-    this.accountService.getAccountById(this.id).subscribe(
-      (data) => {
-        if (data) {
-          console.log('Account data received:', data);
-          this.account = data;
-        } else {
-          console.error('No account found with this id');
-        }
-      },
-      (error) => {
-        console.error('Error fetching account:', error);
-      }
-    );
+    this.accountService.getAccountById(this.id).subscribe((data) => {
+      this.account = data;
+    });
   }
 
   onSubmit() {
     if (this.isValidAmount(this.account.balance)) {
       this.accountService
-        .deposite(this.id, this.account.balance)
+        .withdraw(this.id, this.account.balance)
         .subscribe((data) => {
           this.account = data;
           this.successMessage = 'Withdraw Successfully...';

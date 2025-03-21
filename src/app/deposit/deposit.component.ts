@@ -22,7 +22,6 @@ export class DepositComponent {
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-    console.log('first', this.id);
 
     this.accountService.getAccountById(this.id).subscribe(
       (data) => {
