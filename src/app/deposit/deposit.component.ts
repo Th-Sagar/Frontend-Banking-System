@@ -52,7 +52,7 @@ export class DepositComponent {
     } else {
       setTimeout(() => {
         this.errorMessage = 'Invalid amount... Please Enter Valid Amount';
-      }, 1000);
+      }, 100);
     }
   }
 

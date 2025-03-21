@@ -40,4 +40,8 @@ export class AccountService {
       request
     );
   }
+
+  delete(id: string): Observable<Account> {
+    return this.httpClient.delete<Account>(`${this.baseUrl}/${id}/delete`);
+  }
 }

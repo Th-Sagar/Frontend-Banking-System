@@ -35,4 +35,11 @@ export class AccountListComponent {
   withdraw(id: string) {
     this.router.navigate(['/withdraw', id]);
   }
+
+  delete(id: string) {
+    this.accountService.delete(id).subscribe((data) => {
+      console.log(data);
+      this.getAccounts();
+    });
+  }
 }

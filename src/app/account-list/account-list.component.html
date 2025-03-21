@@ -33,9 +33,17 @@
       <td
         (click)="withdraw(account.id ?? '')"
         style="margin: 10px"
-        class="btn btn-danger"
+        class="btn btn-info"
       >
         Withdraw
+      </td>
+
+      <td
+        (click)="delete(account.id ?? '')"
+        style="margin: 10px"
+        class="btn btn-danger"
+      >
+        Delete
       </td>
     </tr>
   </tbody>
