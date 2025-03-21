@@ -1,59 +1,149 @@
-# FrontendBankingApplication
+# Frontend for Banking System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+This Angular project provides a web-based interface for managing banking operations, including account creation, deposits, withdrawals, and account details. The application connects to a Spring Boot backend to handle business logic and data persistence. The frontend allows users to perform various banking tasks securely and efficiently.
 
-## Development server
+## Table of Contents
 
-To start a local development server, run:
+- [Features](#features)
+- [Live Demo](#live-demo)
+- [Getting Started](#getting-started)
+- [Routing Structure](#routing-structure)
+- [Backend Setup](#backend-setup)
+- [Development](#development)
+- [Testing](#testing)
+- [Built With](#built-with)
+- [Contributing](#contributing)
+
+## Features
+
+- **Account Management**: Create, view, and update bank accounts
+- **Deposits and Withdrawals**: Make deposits and withdrawals on specific accounts
+- **Account Details**: View detailed account information
+- **Routing Setup**: Seamless navigation between different components
+- **Role-Based Access**: Admin and user roles with restricted access to certain features
+
+## Live Demo
+
+Check out the live demo of the application: [Banking System Demo](https://your-demo-link-here)
+
+## Getting Started
+
+### Prerequisites
+
+- Spring Boot (backend)
+- Angular CLI
+- Node.js
+
+#### Backend (Spring Boot)
+
+Ensure you have a Spring Boot application running as the backend. Follow the [backend setup instructions](#backend-setup).
+
+#### Frontend (Angular)
+
+Install Angular CLI:
+
+```bash
+npm install -g @angular/cli
+```
+
+## Installation
+
+Clone the repository
+To clone the repository to your local machine:
+
+1. Copy the repository URL from GitHub.
+2. Open a terminal and run the following command:
+
+```bash
+git clone https://github.com/<your-username>/banking-system-frontend.git
+```
+
+3. Navigate into the project directory:
+
+```bash
+cd banking-system-frontend
+
+```
+
+## Install Frontend Dependencies
+
+To install the required dependencies for the frontend project:
+
+```bash
+npm install
+```
+
+## Routing Structure
+
+![Hospital Management System Logo](./public/image.png)
+
+## Development
+
+Development Server
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Runs the app in development mode at http://localhost:4200
 
-## Code scaffolding
+## Code Scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Generate new components:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Build
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Builds the application for production in dist/ directory
 
-## Running unit tests
+## Testing
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Unit Tests
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+Runs Karma test runner
 
-For end-to-end (e2e) testing, run:
+### End-to-End Tests
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+_Note: Requires configuration of preferred E2E testing framework_
 
-## Additional Resources
+## Built With
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Angular 19.1.7
+2. Angular Router
+3. TypeScript
+4. RxJS
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (git checkout -b feature/new-component)
+3. Commit changes (git commit -m 'Add new component')
+4. Push to the branch (git push origin feature/new-component)
+5. Open a pull request
+
+```bash
+This structure provides:
+- Clear feature overview
+- Quick start instructions
+- Detailed routing documentation
+- Standard Angular development workflows
+- Contribution guidelines
+- Visual organization with tables and code blocks
+
+You can customize the [Built With] section to include any additional libraries or tools used in your project.
+```
