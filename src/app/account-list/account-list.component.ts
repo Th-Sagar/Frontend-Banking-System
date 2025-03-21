@@ -42,4 +42,8 @@ export class AccountListComponent {
       this.getAccounts();
     });
   }
+
+  view(id: string) {
+    this.router.navigate(['/account-details', id]);
+  }
 }

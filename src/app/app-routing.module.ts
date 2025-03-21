@@ -4,6 +4,7 @@ import { AccountListComponent } from './account-list/account-list.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { DepositComponent } from './deposit/deposit.component';
 import { WithdrawComponent } from './withdraw/withdraw.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'withdraw/:id',
     component: WithdrawComponent,
+  },
+  {
+    path: 'account-details/:id',
+    component: AccountDetailsComponent,
   },
 ];
 
