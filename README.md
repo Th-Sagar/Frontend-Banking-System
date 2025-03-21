@@ -24,7 +24,7 @@ This Angular project provides a web-based interface for managing banking operati
 
 ## Live Demo
 
-Check out the live demo of the application: [Banking System Demo](https://your-demo-link-here)
+Check out the live demo of the application: [Banking System Demo](https://bs-angular.netlify.app)
 
 ## Getting Started
 

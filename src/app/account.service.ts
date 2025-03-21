@@ -9,7 +9,7 @@ import { Account } from './account';
 export class AccountService {
   constructor(private httpClient: HttpClient) {}
 
-  private baseUrl = 'http://localhost:9090/api/accounts';
+  private baseUrl = 'https://bs-spring.onrender.com/api/accounts';
 
   getAllAccounts(): Observable<Account[]> {
     return this.httpClient.get<Account[]>(`${this.baseUrl}`);
