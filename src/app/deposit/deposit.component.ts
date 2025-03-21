@@ -12,6 +12,8 @@ import { AccountService } from '../account.service';
 export class DepositComponent {
   id: string = '';
   accountCreate: boolean = false;
+  successMessage: string = '';
+  errorMessage: string = '';
   account: Account = new Account();
   constructor(
     private accountService: AccountService,
@@ -39,11 +41,24 @@ export class DepositComponent {
   }
 
   onSubmit() {
-    this.accountService
-      .deposite(this.id, this.account.balance)
-      .subscribe((data) => {
-        this.account = data;
-        this.router.navigate(['/accounts']);
-      });
+    if (this.isValidAmount(this.account.balance)) {
+      this.accountService
+        .deposite(this.id, this.account.balance)
+        .subscribe((data) => {
+          this.account = data;
+          this.successMessage = 'Deposit Successfully...';
+          setTimeout(() => {
+            this.router.navigate(['/accounts']);
+          }, 2000);
+        });
+    } else {
+      setTimeout(() => {
+        this.errorMessage = 'Invalid amount... Please Enter Valid Amount';
+      }, 1000);
+    }
+  }
+
+  isValidAmount(amount: number): boolean {
+    return amount > 0 && amount < 10000000;
   }
 }

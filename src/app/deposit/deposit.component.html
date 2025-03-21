@@ -18,6 +18,14 @@
       Account Created Successfully
     </div>
 
+    <div *ngIf="successMessage" class="alert alert-success">
+      {{ successMessage }}
+    </div>
+
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+
     <br />
     <button type="submit" class="btn btn-success">Submit</button>
   </form>
