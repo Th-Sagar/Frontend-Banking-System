@@ -5,6 +5,7 @@
     <th>Account Holder Name</th>
 
     <th>Balance</th>
+    <th>Action</th>
   </thead>
 
   <tbody>
@@ -19,6 +20,14 @@
 
       <td>
         {{ account.balance }}
+      </td>
+
+      <td
+        (click)="deposite(account.id ?? '')"
+        style="margin: 10px"
+        class="btn btn-info"
+      >
+        Deposite
       </td>
     </tr>
   </tbody>

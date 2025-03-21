@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountListComponent } from './account-list/account-list.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { DepositComponent } from './deposit/deposit.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'create-account',
     component: CreateAccountComponent,
+  },
+  {
+    path: 'deposit/:id',
+    component: DepositComponent,
   },
 ];
 

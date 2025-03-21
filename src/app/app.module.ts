@@ -7,9 +7,10 @@ import { AccountListComponent } from './account-list/account-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { FormsModule } from '@angular/forms';
+import { DepositComponent } from './deposit/deposit.component';
 
 @NgModule({
-  declarations: [AppComponent, AccountListComponent, CreateAccountComponent],
+  declarations: [AppComponent, AccountListComponent, CreateAccountComponent, DepositComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

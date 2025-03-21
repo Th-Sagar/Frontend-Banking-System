@@ -10,18 +10,22 @@ import { Router } from '@angular/router';
   styleUrl: './create-account.component.css',
 })
 export class CreateAccountComponent {
+  accountCreate = false;
   account: Account = new Account();
   constructor(private accountService: AccountService, private router: Router) {}
 
   saveAccount() {
     this.accountService.createAccount(this.account).subscribe((data) => {
       console.log(data);
+      this.accountCreate = true;
+      setTimeout(() => {
+        this.goToAccount();
+      }, 2000);
     });
   }
 
   onSubmit() {
     this.saveAccount();
-    this.goToAccount();
   }
 
   goToAccount() {
